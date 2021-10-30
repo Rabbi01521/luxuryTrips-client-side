@@ -1,0 +1,74 @@
+[
+  {
+    "key": "61794947cd235c75606ad649",
+    "index": 0,
+    "guid": "0188fb7c-fffb-4609-8b71-9975d91081a8",
+    "picture": "https://api.sharetrip.net/api/v1/hotel/image?key=qAwM/bnNobHHx/NnjGMbh+ebQsiybLB8PCnO2zivDKA7497/vIshjfzsaqUOJjHqZrD3Q4uK+V4LEyV2VnSzOA==",
+    "name": "The Rin Boutique Hotel",
+    "location": "279/121 Moo 12, Nong Prue, Bang Lamung, Chonburi, Pattaya",
+    "price": "BDT 1,612"
+  },
+  {
+    "key": "61794947b2942c2ee2a14e71",
+    "index": 1,
+    "guid": "2df3f8d7-9da4-4500-9a74-541adc5c4039",
+    "picture": "https://api.sharetrip.net/api/v1/hotel/image?key=p5oEnGAKtVA9gWyG+yWsPz+pHdvZa3PMsqBp8JwjwwQ1lZ3vs5eRg2Xija5YHGAx5fUQe9urU5Qc62yp5xuEIw==",
+    "name": "Kirkdale Hotel",
+    "location": "22 St Peters Road, London",
+    "price": "BDT 4,612"
+  },
+  {
+    "key": "61794947e71190708bb6c49d",
+    "index": 2,
+    "guid": "c7d00c51-2167-4aaa-a877-b432089ed488",
+    "picture": "https://api.sharetrip.net/api/v1/hotel/image?key=/fPvsBf07ioR+1uwxGHvpPvaLgMS3v7FX8sbFi4Ope9hOD2pihlIvw4pSD2mPSH//lsLtZbhcwx7V9yeGXp+MA==",
+    "name": "Phuket Marine Poshtel",
+    "location": "48/1 Moo 9, Phuket",
+    "price": "BDT 3,612"
+  },
+  {
+    "key": "61794947a6b731c662ee797c",
+    "index": 3,
+    "guid": "0d2f67f3-212a-4fee-a532-e447c94b5f7c",
+    "picture": "https://api.sharetrip.net/api/v1/hotel/image?key=psAfb1t05i4cLDbzy+IiVsMVG4ZNKU6dGtvT1r30CrbKvfUMaGDPnZf7OtQcM+ngYmLQgWwsyo+elbZHW39Erg==",
+    "name": "Manyi Village",
+    "location": "Banjar Laplapan, Bali",
+    "price": "BDT 2,612"
+  },
+  {
+    "key": "6179494788a69fccb2b1077e",
+    "index": 4,
+    "guid": "94058b59-0173-4961-b545-c575f1f7605d",
+    "picture": "https://api.sharetrip.net/api/v1/hotel/image?key=qAwM/bnNobHHx/NnjGMbh+ebQsiybLB8PCnO2zivDKA7497/vIshjfzsaqUOJjHqZrD3Q4uK+V4LEyV2VnSzOA==",
+    "name": "The Rin Boutique Hotel",
+    "location": "279/121 Moo 12, Nong Prue, Bang Lamung, Chonburi, Pattaya",
+    "price": "BDT 1,612"
+  },
+  {
+    "key": "61794947b796d0b11e053d33",
+    "index": 5,
+    "guid": "ceb6dd9b-319c-49db-809d-58966224b209",
+    "picture": "https://api.sharetrip.net/api/v1/hotel/image?key=PtSeDx0oYVpELzBoecKwNGOJ2KE38pLmqIpDJO3RVzYL5nLotb9cvViTLKgCSSP7pTAZTHxsjGhjAHo/ACL5ug==",
+    "name": "Lighthouse Family Retreat",
+    "location": "Lighthouse Road,  House No. 84, Block A, Cox's Bazar",
+    "price": "BDT 3,612"
+  },
+  {
+    "key": "617949476d7accab317f202e",
+    "index": 6,
+    "guid": "5c09d7b1-faa9-4302-91fb-3bc7103e033b",
+    "picture": "https://api.sharetrip.net/api/v1/hotel/image?key=CzW/l1oMvEzQG5fGnk/d/bPOuIuzrzJONAqoYlGpoBVhJ/XRR/vVRfHAXVRV23omPDzAimLzqZ+4bcaVbPS0Ng==",
+    "name": "Hotel Pex",
+    "location": "Via Della Provvidenza 31, Rubano",
+    "price": "BDT 5,612"
+  },
+  {
+    "key": "6179494782b06cea9bc9c795",
+    "index": 7,
+    "guid": "647c815b-0896-414c-8198-93a99700422b",
+    "picture": "https://api.sharetrip.net/api/v1/hotel/image?key=RcfErvXUXLdfcfQbHiz6kZWY9nhxIUK/m9geSYoZmOEPUW047kczDTy0Br7nC20LG3ZQ7THvTcbKncdGuvRMNw==",
+    "name": "Ercan Inn Hotel",
+    "location": "Kadirga Limanı Cad. No:97/A Sultanahmet, Istanbul",
+    "price": "BDT 1,059"
+  }
+]
