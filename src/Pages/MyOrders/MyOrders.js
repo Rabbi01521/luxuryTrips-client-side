@@ -85,7 +85,7 @@ const MyOrders = () => {
                                     </div>
                                     <div className="flex-auto text-gray-500 my-1">
                                       <span className="mr-3 ">
-                                        {orderInfo?.name}
+                                        {orderInfo?.details?.name}
                                       </span>
                                       <span className="mr-3 border-r border-gray-200  max-h-0"></span>
                                       {/* <span>Cochin, IND</span> */}
