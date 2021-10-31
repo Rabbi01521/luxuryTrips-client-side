@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# LuxryTrip
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live Website](https://tour-planner-45921.web.app/)
 
-## Available Scripts
+### UI ScreenShot :
 
-In the project directory, you can run:
+<img src="https://i.ibb.co/LvLzxfR/Luxry-Trip-8.png" alt="Luxry-Trip-8" border="0">
+<img src="https://i.ibb.co/JcFqFmy/Luxry-Trip-7.png" alt="Luxry-Trip-7" border="0">
+<img src="https://i.ibb.co/5kjvQdc/Luxry-Trip-6.png" alt="Luxry-Trip-6" border="0">
+<img src="https://i.ibb.co/tcgfxW3/Luxry-Trip-5.png" alt="Luxry-Trip-5" border="0">
+<img src="https://i.ibb.co/N2xdBjv/Luxry-Trip-4.png" alt="Luxry-Trip-4" border="0">
+<img src="https://i.ibb.co/1b9xxB4/Luxry-Trip-3.png" alt="Luxry-Trip-3" border="0">
+<img src="https://i.ibb.co/ZhytwN4/Luxry-Trip-2.png" alt="Luxry-Trip-2" border="0">
+<img src="https://i.ibb.co/7zXfwmc/Luxry-Trip-1.png" alt="Luxry-Trip-1" border="0">
+<img src="https://i.ibb.co/fGPntjg/Luxry-Trip.png" alt="Luxry-Trip" border="0">
 
-### `yarn start`
+### Features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- user can visit all the page through routing .
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- user can login.
 
-### `yarn test`
+- New user can register.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- If a user is logged in, he/she will see more options like My Orders, Manage All Orders, Add A New Service, Logout. Based on your website idea, you can change the name of these menu items.
 
-### `yarn build`
+- user can visit all pages but if user is logged in.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- user can logged in by Github and Google.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- if Router not matched then user see 404 page.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- After reloading the page on a private route, the user should not be redirected to the login page.
 
-### `yarn eject`
+- if user enter wrong email and password then it show error message.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Once logged in, the user name, logout button should appear on the header which will log out the user once clicked.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- On the my orders page, the logged in user will see only his/her orders. If the user wants, he/she should be able to cancel/delete any order. Ask a confirmation message before deleting or canceling an item. Using browser confirmation dialog is ok.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- on the Add A New Service, the admin will be able to add a brand new service. After adding that service, this service will appear on the home page. The name Add a new service could be changed based on your website. On this page, you can put an input field to put an image url.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- .env file to hide db user and password and also use .gitignore file
 
-## Learn More
+- Click on the Manage All Orders page, the logged in user will see the orders placed by every users.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- i used Environment variable in Client side.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Technology :
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React
+- React Tailwind CSS & components
+- Own API (for fetching data)
+- React Router
+- FireBase
+- full Responsive
+- node
+- express
+- mongodb
+- axios
+- react hook form
