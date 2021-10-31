@@ -7,7 +7,7 @@ const ManageOrders = () => {
   const [update, setUpdate] = useState(false);
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    fetch("https://shielded-woodland-51760.herokuapp.com/orders")
+    fetch("https://shielded-woodland-51760.herokuapp.com/orders/")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [update]);

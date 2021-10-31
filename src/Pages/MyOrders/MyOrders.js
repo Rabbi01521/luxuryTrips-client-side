@@ -17,8 +17,9 @@ const MyOrders = () => {
       .then((data) => setOrders(data));
   }, []);
 
-  // DELETE a product
+  // DELETE a Orders
   const handleDeleteEvents = (id) => {
+    console.log(id);
     const proceed = window.confirm("Are You Sure, You Want To Delete ?");
     if (proceed) {
       const url = `https://shielded-woodland-51760.herokuapp.com/orders/${id}`;
@@ -140,14 +141,14 @@ const MyOrders = () => {
               </div>
             ))
           ) : (
-            <div className="container mx-auto flex justify-center items-center w-screen h-screen">
-              <h1 className="text-3xl">No Orders Available</h1>
+            <div className=" flex justify-center items-center my-52">
+              <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
             </div>
           )}
         </div>
       ) : (
-        <div className=" flex justify-center items-center my-52">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+        <div className="container mx-auto flex justify-center items-center w-screen h-screen">
+          <h1 className="text-3xl">No Orders Available</h1>
         </div>
       )}
     </div>

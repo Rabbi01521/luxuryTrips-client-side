@@ -33,25 +33,9 @@ const PlaceOrder = () => {
   }, [tripId, trips, reset, filterOrder]);
 
   const url = "https://shielded-woodland-51760.herokuapp.com/orders";
-  // useEffect(() => {
-  //   fetch(url)
-  //     .then((res) => res.json())
-  //     .then((data) => setOrders(data));
-  // }, []);
-  // const filter = orders.filter((order) => order.Email === user.email);
-  // console.log(filter);
-  // const findSameId = orders.find((trip) => trip._id === tripId);
+
   const onSubmit = (data) => {
     console.log(data);
-    // data.filterOrder = found;
-
-    // if (findSameId) {
-    //   alert("This Trip is already in use!! Please Select another one");
-    //   history.push("/home");
-    //   return;
-    // }
-    // date collect from order submit
-    // else {
     let today = new Date();
     let date =
       today.getFullYear() +
@@ -62,10 +46,10 @@ const PlaceOrder = () => {
     let time =
       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     let dateTime = date + " " + time;
-    // console.log(dateTime);
     data.dateTime = dateTime;
     data.status = "Pending";
-
+    delete data._id;
+    console.log(data);
     const orderPost = async () => {
       try {
         const res = await axios.post(url, data);
