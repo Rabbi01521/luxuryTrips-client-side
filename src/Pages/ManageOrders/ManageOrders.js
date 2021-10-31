@@ -112,7 +112,7 @@ const ManageOrders = () => {
                             <span className="inline-block w-1/3 md:hidden font-bold">
                               TripName
                             </span>
-                            {order.name}
+                            {order.details?.name}
                           </td>
                           <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                             <span className="inline-block w-1/3 md:hidden font-bold">

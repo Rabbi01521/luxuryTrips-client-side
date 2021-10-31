@@ -58,7 +58,7 @@ const MyOrders = () => {
                           <div className="flex-none sm:flex">
                             <div className=" relative h-32 w-32   sm:mb-0 mb-3">
                               <img
-                                src={orderInfo?.picture}
+                                src={orderInfo?.details?.picture}
                                 alt={orderInfo?.name}
                                 className=" w-32 h-32 object-cover rounded-2xl"
                               />
@@ -116,7 +116,9 @@ const MyOrders = () => {
                               <div className="flex pt-2  text-sm text-gray-500">
                                 <div className="flex-1 inline-flex items-center">
                                   <CurrencyDollarIcon className="h-5 w-5 mr-2"></CurrencyDollarIcon>
-                                  <p className="">{orderInfo?.price}</p>
+                                  <p className="">
+                                    {orderInfo?.details?.price}
+                                  </p>
                                 </div>
                                 <div className="flex-1 inline-flex items-center">
                                   <PhoneIcon className="h-5 w-5 mr-2"></PhoneIcon>

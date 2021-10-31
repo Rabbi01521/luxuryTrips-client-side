@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
 import { useHistory, useLocation } from "react-router-dom";
@@ -11,9 +11,10 @@ import "./PlaceOrder.css";
 const PlaceOrder = () => {
   const history = useHistory();
   const location = useLocation();
-  const [found, setFound] = useState({});
+  const { tripId } = useParams();
+  const [trips] = useTrips();
   // const [orders, setOrders] = useState([]);
-  const { user } = useAuth();
+  const { user, details } = useAuth();
   const redirect_uri = location.state?.from || "/myOrders";
   const {
     register,
@@ -22,20 +23,19 @@ const PlaceOrder = () => {
     reset,
   } = useForm();
 
-  const { tripId } = useParams();
-  const [trips] = useTrips();
   console.log(trips);
-  const filterOrder = trips.find((trip) => trip._id === tripId);
-  console.log(filterOrder);
-  useEffect(() => {
-    setFound(filterOrder);
-    reset(filterOrder);
-  }, [tripId, trips, reset, filterOrder]);
+
+  // useEffect(() => {
+  //   if (trips.length > 0) {
+  //     const filterOrder = trips.find((trip) => trip._id === tripId);
+  //     setdetails(filterOrder);
+  //     // reset(filterOrder);
+  //   }
+  // }, [tripId, trips, reset]);
 
   const url = "https://shielded-woodland-51760.herokuapp.com/orders";
 
   const onSubmit = (data) => {
-    console.log(data);
     let today = new Date();
     let date =
       today.getFullYear() +
@@ -48,7 +48,8 @@ const PlaceOrder = () => {
     let dateTime = date + " " + time;
     data.dateTime = dateTime;
     data.status = "Pending";
-    delete data._id;
+    data.details = details;
+    // delete data._id;
     console.log(data);
     const orderPost = async () => {
       try {
@@ -66,6 +67,8 @@ const PlaceOrder = () => {
     orderPost();
   };
   console.log(errors);
+
+  // slider settings
   const settings = {
     speed: 300,
     infinite: true,
@@ -108,16 +111,16 @@ const PlaceOrder = () => {
       <div
         className=" h-52 bg-green-800	bg-left-top bg-auto bg-repeat-x  flex justify-center items-center mb-16"
         style={{
-          backgroundImage: `url(${found?.picture})`,
+          backgroundImage: `url(${details?.picture})`,
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
         }}
       >
         <h1 className="border-4 border-indigo-500 border-opacity-100 text-blue-800 p-3 text-3xl font-black">
-          {found?.name}
+          {details?.name}
         </h1>
       </div>
-
+      {/* slider */}
       <section className="md:py-16">
         <div className=" grid grid-cols-1 items-center">
           <div className="w-full md:w-9/12 sm:w-5/12 ml-auto mr-auto px-4 ">
@@ -125,28 +128,36 @@ const PlaceOrder = () => {
               <Slider {...settings} className="rounded-lg">
                 <div className="w-full">
                   <img
-                    src={found?.img?.img1 ? found?.img?.img1 : found?.picture}
+                    src={
+                      details?.img?.img1 ? details?.img?.img1 : details?.picture
+                    }
                     alt=""
                     className="object-contain w-full"
                   />
                 </div>
                 <div>
                   <img
-                    src={found?.img?.img2 ? found?.img?.img2 : found?.picture}
+                    src={
+                      details?.img?.img2 ? details?.img?.img2 : details?.picture
+                    }
                     alt=""
                     className="object-contain  w-full"
                   />
                 </div>
                 <div>
                   <img
-                    src={found?.img?.img3 ? found?.img?.img3 : found?.picture}
+                    src={
+                      details?.img?.img3 ? details?.img?.img3 : details?.picture
+                    }
                     alt=""
                     className="object-contain w-full"
                   />
                 </div>
                 <div>
                   <img
-                    src={found?.img?.img4 ? found?.img?.img4 : found?.picture}
+                    src={
+                      details?.img?.img4 ? details?.img?.img4 : details?.picture
+                    }
                     alt=""
                     className="object-contain w-full"
                   />
@@ -156,14 +167,16 @@ const PlaceOrder = () => {
           </div>
           <div className="w-full md:w-9/12 ml-auto mr-auto px-4">
             <div className="md:pr-12">
-              <h3 className="text-3xl font-semibold">{found?.name}</h3>
+              <h3 className="text-3xl font-semibold">{details?.name}</h3>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                {found?.about}
+                {details?.about}
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* React Hook Form */}
       <div className="mt-10 py-10">
         <div className="container max-w-full mx-auto md:py-10 px-6">
           <div className=" max-w-6xl mx-auto px-6">
@@ -240,7 +253,7 @@ const PlaceOrder = () => {
                           type="text"
                           className="block border border-grey-light w-full p-3 rounded mb-4"
                           placeholder="To"
-                          defaultValue={found?.name}
+                          defaultValue={details?.name}
                           {...register("to", { required: true })}
                         />
                         {errors.to && (
@@ -322,12 +335,11 @@ const PlaceOrder = () => {
                         This field is required
                       </span>
                     )}
-                    <button
+                    <input
                       type="submit"
+                      value="Place Order"
                       className="w-full text-center py-3 rounded bg-blue-600 text-white hover:bg-green-dark focus:outline-none my-1"
-                    >
-                      Place Order
-                    </button>
+                    />
                   </form>
                 </div>
               </div>
