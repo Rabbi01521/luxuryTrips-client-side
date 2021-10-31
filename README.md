@@ -22,7 +22,7 @@
 
 - New user can register.
 
-- If a user is logged in, he/she will see more options like My Orders, Manage All Orders, Add A New Service, Logout. Based on your website idea, you can change the name of these menu items.
+- If a user is logged in, he/she will see more options like My Orders, Manage All Orders, Add A New Service, Logout.
 
 - user can visit all pages but if user is logged in.
 
@@ -36,9 +36,9 @@
 
 - Once logged in, the user name, logout button should appear on the header which will log out the user once clicked.
 
-- On the my orders page, the logged in user will see only his/her orders. If the user wants, he/she should be able to cancel/delete any order. Ask a confirmation message before deleting or canceling an item. Using browser confirmation dialog is ok.
+- On the my orders page, the logged in user will see only his/her orders. If the user wants, he/she should be able to cancel/delete any order. Ask a confirmation message before deleting or canceling an item.
 
-- on the Add A New Service, the admin will be able to add a brand new service. After adding that service, this service will appear on the home page. The name Add a new service could be changed based on your website. On this page, you can put an input field to put an image url.
+- on the Add A New Service, the user will be able to add a brand new service. After adding that service, this service will appear on the home page.
 
 - .env file to hide db user and password and also use .gitignore file
 
