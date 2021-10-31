@@ -12,7 +12,7 @@ const Trip = ({ trip }) => {
     history.push(`/trip/${_id}`);
   };
   return (
-    <div onClick={() => handleSavedDetails(trip)}>
+    <div onClick={() => handleSavedDetails(trip)} className="cursor-pointer">
       {/* <Link to={`/trip/${_id}`}> */}
       <div
         className="bg-gray-100 mx-auto  h-64 mt-5 rounded-lg overflow-hidden"
